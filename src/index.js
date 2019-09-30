@@ -5,7 +5,8 @@ import { Provider } from 'react-redux'
 import reducer from './reducers'
 import middleware from './middleware'  
 import App from './components/App'
-
+import "./assets/css/index.css"
+import "./assets/css/nucleo-icons.css";
 
 const store = createStore(reducer, middleware);
 

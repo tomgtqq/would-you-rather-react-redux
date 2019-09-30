@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: 'https://react-1252743632.cos.ap-beijing.myqcloud.com/sarah.png',
+    avatarURL: 'https://react-1252743632.cos.ap-beijing.myqcloud.com/2.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: 'https://react-1252743632.cos.ap-beijing.myqcloud.com/tylermcginnis.png',
+    avatarURL: 'https://react-1252743632.cos.ap-beijing.myqcloud.com/9.png',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: 'https://react-1252743632.cos.ap-beijing.myqcloud.com/johndoe.png',
+    avatarURL: 'https://react-1252743632.cos.ap-beijing.myqcloud.com/7.png',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -196,7 +196,7 @@ export function _saveQuestionAnswer ({ authedUser, qid, answer }) {
         }
       }
 
-      res(questions[qid])
+      res(questions[qid]) // resolve that question
     }, 500)
   })
 }

@@ -1,42 +1,55 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Card, Button, Segment, Image } from "semantic-ui-react" 
 import { Link, withRouter } from 'react-router-dom'
 
+import {
+    Button,
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+  } from "reactstrap";
 
 class Question extends Component {
     render() {
-        console.log(this.props)
-        const { question,author } = this.props
-
-        if ( question === null) {
-            return <p>This Question doesn't existed </p>
-        }
-
-        const {
-            id, optionOne
-        } = question
-
-        const {
-            name, avatarURL
-        } = author
+        const { question, author, answered } = this.props
+        const { avatarURL } = author
+        const { id, optionOne , optionTwo } = question
 
         return(
-            <Card>
-                <Card.Content>
-                    <Card.Header>
-                        <div>
-                            <Image src={avatarURL} avatar/>
-                            <span>{name} asks</span>
-                        </div>
-                    </Card.Header>
-                    <Segment basic>Would you rather</Segment>    
-                    <Segment>{optionOne.text.substring(0,16)}...</Segment>
-                    <Link to={`/questions/${id}`}>
-                        <Button>View Poll</Button>
-                    </Link>         
-                </Card.Content>
-            </Card>   
+            <Card className="card-testimonial">
+                <CardHeader className="card-header-avatar">
+                    <img
+                      alt="..."
+                      className="img img-raised"
+                      src={avatarURL}
+                    />
+                </CardHeader>
+                <CardBody>
+                  <p className="card-description">
+                     Would you rather 
+                     {optionOne.text.substring(0,28)}... <strong>or</strong> {optionTwo.text.substring(0,28)}...
+                  </p>
+                  <div className="icon icon-primary">
+                    <i className="fa fa-quote-right" />
+                  </div>
+                </CardBody>
+                <CardFooter>
+                    { answered ?
+                            <Link to={`/questions/${id}`}>
+                                <Button className="btn-round btn-just-icon" color="primary">
+                                    View Poll
+                                </Button>
+                            </Link>
+                            :
+                            <Link to={`/vote/${id}`}>
+                                <Button className="btn-round btn-just-icon" color="primary">
+                                    Vote
+                                </Button>
+                            </Link>
+            }
+                </CardFooter>
+              </Card>
         )
     }
 }

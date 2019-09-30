@@ -18,29 +18,30 @@ function addQuestion(question) {
     }
   }
   
-  export function handleAddQuestion(optionOneText, optionTwoText, author) {
-    return (dispatch) => {
-      dispatch(showLoading());
-      return saveQuestion({
-        optionOneText,
-        optionTwoText,
-        author
-      })
-        .then(question => dispatch(addQuestion(question)))
-        .then(() => dispatch(hideLoading()));
-    };
+export function handleAddQuestion(optionOneText, optionTwoText, author) {
+  return (dispatch) => {
+    dispatch(showLoading());
+    return saveQuestion({
+      optionOneText,
+      optionTwoText,
+      author
+    }).then(question => dispatch(addQuestion(question))) // add question to store
+      .then(() => dispatch(hideLoading()));
   }
-  export function handleAddQuestionAnswer(qid, answer) {
-    return (dispatch, getState) => {
-      const { authedUser } = getState();
-      dispatch(showLoading());
+}
 
-      return saveQuestionAnswer({
-        authedUser,
-        qid,
-        answer
-      })
-        .then(question => dispatch(addQuestion(question)))
-        .then(() => dispatch(hideLoading()));
-    };
-  }
+export function handleAddQuestionAnswer(qid, answer) {
+  return (dispatch, getState) => {
+    const { authedUser } = getState();
+    dispatch(showLoading());
+    return saveQuestionAnswer({
+      authedUser,
+      qid,
+      answer
+    }).then(question => {
+      console.log(question)
+      return dispatch(addQuestion(question))
+    }) // add answer to store
+      .then(() => dispatch(hideLoading()));
+  };
+}
