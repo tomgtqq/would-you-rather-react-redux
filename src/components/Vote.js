@@ -27,10 +27,13 @@ class Vote extends Component {
     }
 
     componentDidMount() {
-        document.body.classList.toggle("lock-page");
+        document.body.classList.toggle("lock-page")
+        if (!this.props.question) {
+          return <Redirect to="/nomatch404" />
+        }
     }
     componentWillUnmount() {
-    document.body.classList.toggle("lock-page");
+    document.body.classList.toggle("lock-page")
     }
 
     onRadioBtnClick = ( rselected ) => {
@@ -53,11 +56,10 @@ class Vote extends Component {
     };
 
     render() {
+        if (!this.props.question) {
+          return <Redirect to="/nomatch404" />
+        }
         const { question, author } = this.props
-
-        if (question === null) {
-          return <p>This question doesn't exist</p>
-         }
         const { id } = question
 
         if(this.state.toViewPoll === true) {

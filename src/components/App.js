@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { handleInitialData } from "../actions/shared"
 import { BrowserRouter as Router, Route, Switch,NavLink} from 'react-router-dom'
-import { Container ,Header, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import { Container , Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
 import LoadingBar from 'react-redux-loading'
 import Login from "./Login"
 import Dashboard from "./Dashboard"
+import NoMatch404 from "./NoMatch404";
 import Vote from './Vote'
 import NewQuestion from './NewQuestion'
 import LeaderBoard from './LeaderBoard'
@@ -74,6 +75,7 @@ class App extends Component {
                                                 <Route path='/leaderboard' component={LeaderBoard}/>
                                                 <Route path="/questions/:id" component={ViewPoll}/>
                                                 <Route path="/vote/:id" component={Vote}/>
+                                                <Route component={NoMatch404} />
                                             </Switch>
                                         </div>
                                     )}
