@@ -1,7 +1,7 @@
 # Would You Rather Project
 
 Would You Rather Project is a React & Redux app
-![](./src/assets/img/info.gif =400x400)
+![](./src/assets/img/info.gif)
 
 ## Database 
 There are two types of objects stored in our database:
