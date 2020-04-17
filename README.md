@@ -1,6 +1,7 @@
 # Would You Rather Project
 
 Would You Rather Project is a React & Redux app
+
 ![](./src/assets/img/info.gif)
 
 ## Database 
