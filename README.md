@@ -3,7 +3,7 @@
 Would You Rather Project is a React & Redux app
 
 
-![info.gif](https://react-1252743632.cos.ap-beijing.myqcloud.com/would-you-rather/info.gif)
+![info.gif](/src/assets/img/info.gif)
 
 ## Database 
 There are two types of objects stored in our database:
