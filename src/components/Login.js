@@ -17,9 +17,9 @@ class Login extends Component {
 
     handleChange = ((e,{ value }) => {
         const { users } = this.props;
-        this.setState({ 
-            value, 
-            avatarURL: users[value].avatarURL 
+        this.setState({
+            value,
+            avatarURL: users[value].avatarURL
         })
     })
     handleSubmit = event => {
@@ -35,11 +35,11 @@ class Login extends Component {
 
     render(){
         const { users } = this.props
-        return (    
+        return (
         <div className="content">
             <Container>
-                <Col className="ml-auto mr-auto" lg="4" md="6">    
-                    <Form onSubmit={this.handleSubmit}>         
+                <Col className="ml-auto mr-auto" lg="4" md="6">
+                    <Form onSubmit={this.handleSubmit}>
                             <Card className="card-login card-white">
                             <CardHeader>
                                 <img
@@ -62,16 +62,16 @@ class Login extends Component {
                                             value: id
                                         }
                                     })}
-                                />                        
+                                />
                             </CardBody>
                             <CardFooter>
                                 <Form.Button fluid size="large" disabled={!this.state.value} style={{background:"#C752E7",color:"#fff"}}>  Get Started </Form.Button>
                             </CardFooter>
                         </Card>
-                        </Form>  
+                        </Form>
                     </Col>
                 </Container>
-            </div>  
+            </div>
         )
     }
 }

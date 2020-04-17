@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: 'https://www.system-concepts.com/wp-content/uploads/2018/04/iStock-908333824-cool-granny1-1000px.jpg',
+    avatarURL: 'https://celebmafia.com/wp-content/uploads/2015/09/sarah-hyland-2015-primetime-emmy-awards-in-los-angeles_13.jpg',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: '../assets/img/tyler.png',
+    avatarURL: 'https://s3-us-west-1.amazonaws.com/udacity-content/instructor/tyler-mcginnis%402x-2iq0po9.jpg',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -22,9 +22,9 @@ let users = {
     questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
   },
   johndoe: {
-    id: 'johndoe',
-    name: 'John Doe',
-    avatarURL: '../assets/img/johndoe.png',
+    id: 'monica',
+    name: 'Monica',
+    avatarURL: 'http://img5.mtime.cn/pi/2017/06/05/095226.64717662_369X369X4.jpg',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
