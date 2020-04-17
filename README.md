@@ -2,8 +2,7 @@
 
 Would You Rather Project is a React & Redux app
 
-
-![info.gif](/src/assets/img/info.gif =250x)
+![<img src="info.gif" width="250"/>](/src/assets/img/info.gif)
 
 ## Database 
 There are two types of objects stored in our database:
